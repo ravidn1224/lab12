@@ -26,3 +26,8 @@ jobs:
         - name: Run tests
           run: |
             pytest
+            echo "Tests completed successfully"
+        - name: Notify success
+          run: |
+            echo "All tests passed successfully!"
+          if: success()
